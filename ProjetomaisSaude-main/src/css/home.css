@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    max-width: 1080px;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header {
+    width: 100%;
+    background-color: #3F8536;
+    padding: 10px;
+}
+
+.logo, .sociais{
+    width: 25%;
+}
+
+.logo img{
+    width: 100px;
+    cursor: pointer;
+}
+
+.menu {
+    width: 50%;
+    display: flex;
+}
+
+.menu nav a{
+    color: white;
+    text-decoration: none;
+    padding-right: 18px;
+    font-size: 15px;
+    justify-content: space-between;
+}
+
+.sociais button {
+    width: 40px;
+    height: 40px;
+    background-color:#3F8536;
+    color: #ffff;
+    border-radius: 8px;
+    margin-right: 10px;
+    border: 1px solid #3F8536;
+}
+
+.sociais button i{
+    font-size: 20px;    
+}
+
+.container2{
+    width: 1350px;
+    height: 100px;
+    opacity: 0.75;
+    background: #E6FFDE;
+    position: relative;
+}
+
+.imgfruit1 {
+    text-align: center;
+    background-color:#E6FFDE;
+}
+
+.colors {
+    display: flex; 
+    justify-content: space-between; 
+}
+
+.color1 {
+    width: 270px;
+    height: 130pxpx;
+    background: #3F8536;
+}
+
+.color2 {
+    width: 270px;
+    height: 130px;
+    background: #BFDAB7;
+}
+
+.color3 {
+    width: 270px;
+    height: 130px;
+    background: #739DBD;
+}
+
+.color4 {
+    width: 270px;
+    height: 130px;
+    background: #F12323;
+}
+
+.color5 {
+    width: 270px;
+    height: 130px;
+    background: #F9C601;
+}
+
+.banner{
+    background-color:#E6FFDE;
+}
+
+.apresentacion h4 {
+    color: white;
+    background-color:#0c3b05;
+    text-align: center;
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+
+.apresentacion p {
+    text-align: center;
+    color:#0c3b05;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.carousel {
+    margin: 0 auto; 
+    display: block; 
+    width: 80%;     
+    max-width: 800px; 
+    margin-top: 50px; 
+    border-radius: 5px;
+}
+
+
+
+
+
+
