@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    max-width: 1080px;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header {
+    width: 100%;
+    background-color: #3F8536;
+    padding: 10px;
+}
+
+.logo, .sociais{
+    width: 25%;
+}
+
+.logo img{
+    width: 100px;
+    cursor: pointer;
+}
+
+.menu {
+    width: 50%;
+    display: flex;
+}
+
+.menu nav a{
+    color: white;
+    text-decoration: none;
+    padding-right: 18px;
+    font-size: 15px;
+    justify-content: space-between;
+}
+
+.sociais button {
+    width: 40px;
+    height: 40px;
+    background-color:#3F8536;
+    color: #ffff;
+    border-radius: 8px;
+    margin-right: 10px;
+    border: 1px solid #3F8536;
+}
+
+.sociais button i{
+    font-size: 20px;    
+}
+
+.container2{
+    width: 1350px;
+    height: 100px;
+    opacity: 0.75;
+    background: #E6FFDE;
+    position: relative;
+}
+
+section {
+    text-align: center; 
+    margin-top: 20px;
+}
+
+section img {
+    max-width: 100%; 
+    height: auto;
+}
+
+section a {
+    display: inline-block; 
+    margin-top: 10px; 
+    text-decoration: none; 
+    color: #3F8536; 
+    font-weight: bold; 
+}
+
+section a:hover {
+    color: #005fa3; 
+}
+
+footer {
+    background-color: #0c3b05; 
+    color: white; 
+    padding: 20px 0; 
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around; 
+    flex-wrap: wrap; 
+    max-width: 1200px;
+    margin: 0 auto; 
+}
+
+.footer-section {
+    flex: 1;
+    margin: 10px;
+    min-width: 200px;
+}
+
+.footer-section h4 {
+    margin-bottom: 10px;
+    border-bottom: 2px solid #28a745;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.footer-section ul {
+    list-style: none; 
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #28a745; 
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #555;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; 
+        align-items: center;
+}
+}
