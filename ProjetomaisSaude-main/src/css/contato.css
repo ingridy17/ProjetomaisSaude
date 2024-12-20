@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-.container{
+.container {
     max-width: 1080px;
     display: flex;
     margin: 0 auto;
@@ -18,11 +18,11 @@ header {
     padding: 10px;
 }
 
-.logo, .sociais{
+.logo, .sociais {
     width: 25%;
 }
 
-.logo img{
+.logo img {
     width: 100px;
     cursor: pointer;
 }
@@ -30,32 +30,41 @@ header {
 .menu {
     width: 50%;
     display: flex;
+    justify-content: center;
 }
 
-.menu nav a{
+.menu nav {
+    display: flex;
+    justify-content: center; 
+    gap: 20px; 
+    flex-wrap: nowrap; 
+    width: 100%;
+}
+
+.menu nav a {
     color: white;
     text-decoration: none;
-    padding-right: 18px;
     font-size: 15px;
-    justify-content: space-between;
+    text-align: center;
+    flex: none; 
 }
 
 .sociais button {
     width: 40px;
     height: 40px;
-    background-color:#3F8536;
+    background-color: #3F8536;
     color: #ffff;
     border-radius: 8px;
     margin-right: 10px;
     border: 1px solid #3F8536;
 }
 
-.sociais button i{
-    font-size: 20px;    
+.sociais button i {
+    font-size: 20px;
 }
 
-.container2{
-    width: 1350px;
+.container2 {
+    width: 100%;
     height: 100px;
     opacity: 0.75;
     background: #E6FFDE;
@@ -74,7 +83,7 @@ header {
 
 h2 {
     text-align: center;
-    color: #2d6a4f; 
+    color: #2d6a4f;
     margin-bottom: 20px;
 }
 
@@ -82,7 +91,7 @@ label {
     font-weight: bold;
     margin-bottom: 8px;
     display: block;
-    color: #2d6a4f; 
+    color: #2d6a4f;
 }
 
 input[type="email"], input[type="password"], textarea, select {
@@ -90,20 +99,20 @@ input[type="email"], input[type="password"], textarea, select {
     padding: 12px;
     margin: 8px 0 20px;
     border-radius: 5px;
-    border: 1px solid #2d6a4f; 
+    border: 1px solid #2d6a4f;
     font-size: 14px;
-    background-color: #f1f1f1; 
+    background-color: #f1f1f1;
 }
 
 input[type="email"]:focus, input[type="password"]:focus, textarea:focus, select:focus {
-    border-color: #4c9c5b; 
+    border-color: #4c9c5b;
     outline: none;
 }
 
 input[type="submit"] {
     width: 100%;
     padding: 12px;
-    background-color: #2d6a4f; 
+    background-color: #2d6a4f;
     color: white;
     border: none;
     border-radius: 5px;
@@ -112,38 +121,28 @@ input[type="submit"] {
 }
 
 footer {
-    background-color: #2d6a4f; 
+    background-color: #0c3b05;
     color: white;
     text-align: center;
-    padding: 10px 0;
-    position: fixed;
+    padding: 20px 0;
+    position: relative; 
     width: 100%;
-    bottom: 0;
-}
-
-footer a {
-    color: white;
-    text-decoration: none;
-}
-
-footer {
-    background-color: #0c3b05; 
-    color: white; 
-    padding: 20px 0; 
 }
 
 .footer-container {
     display: flex;
-    justify-content: space-around; 
-    flex-wrap: wrap; 
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px; 
     max-width: 1200px;
-    margin: 0 auto; 
+    margin: 0 auto;
 }
 
 .footer-section {
     flex: 1;
     margin: 10px;
     min-width: 200px;
+    text-align: center;
 }
 
 .footer-section h4 {
@@ -154,7 +153,8 @@ footer {
 }
 
 .footer-section ul {
-    list-style: none; 
+    list-style: none;
+    padding: 0;
 }
 
 .footer-section ul li a {
@@ -164,7 +164,7 @@ footer {
 }
 
 .footer-section ul li a:hover {
-    color: #28a745; 
+    color: #28a745;
 }
 
 .footer-bottom {
@@ -172,11 +172,122 @@ footer {
     margin-top: 10px;
     padding-top: 10px;
     border-top: 1px solid #555;
+    font-size: 14px; 
+}
+
+@media (max-width: 1200px) {
+    .container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .logo, .sociais {
+        width: 30%;
+        text-align: center;
+    }
+
+    .menu {
+        width: 100%;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .menu nav {
+        flex-direction: column; 
+        gap: 5px;
+    }
+
+    .menu nav a {
+        font-size: 12px; 
+    }
+
+
+    .footer-container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .footer-section {
+        flex: 1;
+        min-width: 200px;
+        margin: 20px 0;
+    }
 }
 
 @media (max-width: 768px) {
     .container {
         flex-direction: column; 
         align-items: center;
+    }
+
+    .logo, .sociais {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .menu {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu nav a {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .sociais {
+        justify-content: center;
+    }
+
+    .sociais button {
+        width: 35px;
+        height: 35px;
+        margin-right: 5px;
+    }
+
+    .container2 {
+        width: 100%;
+    }
+
+    footer {
+        text-align: center;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        min-width: auto;
+        margin-bottom: 20px;
+    }
 }
+
+@media (max-width: 480px) {
+    .logo img {
+        width: 80px;
+    }
+
+    .menu nav a {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .sociais button {
+        width: 30px;
+        height: 30px;
+    }
+
+    .footer-section ul li a {
+        font-size: 14px; 
+    }
+
+    .footer-bottom {
+        font-size: 12px; 
+    }
 }
+
+

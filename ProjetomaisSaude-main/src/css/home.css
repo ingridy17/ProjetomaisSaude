@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-.container{
+.container {
     max-width: 1080px;
     display: flex;
     margin: 0 auto;
@@ -18,11 +18,11 @@ header {
     padding: 10px;
 }
 
-.logo, .sociais{
+.logo, .sociais {
     width: 25%;
 }
 
-.logo img{
+.logo img {
     width: 100px;
     cursor: pointer;
 }
@@ -30,32 +30,59 @@ header {
 .menu {
     width: 50%;
     display: flex;
+    justify-content: center;
 }
 
-.menu nav a{
+.menu nav {
+    display: flex;
+    justify-content: center; 
+    gap: 20px; 
+    flex-wrap: nowrap; 
+    width: 100%;
+}
+
+.menu nav a {
     color: white;
     text-decoration: none;
-    padding-right: 18px;
     font-size: 15px;
-    justify-content: space-between;
+    text-align: center;
+    flex: none; 
+}
+
+@media (max-width: 768px) {
+    .menu nav {
+        flex-wrap: wrap; 
+        justify-content: center;
+    }
+
+    .menu nav a {
+        flex: none;
+        width: 100%; 
+        text-align: center;
+    }
+}
+
+.sociais {
+    display: flex;
+    justify-content: flex-end;
 }
 
 .sociais button {
     width: 40px;
     height: 40px;
-    background-color:#3F8536;
+    background-color: #3F8536;
     color: #ffff;
     border-radius: 8px;
-    margin-right: 10px;
+    margin-left: 10px;
     border: 1px solid #3F8536;
 }
 
-.sociais button i{
-    font-size: 20px;    
+.sociais button i {
+    font-size: 20px;
 }
 
-.container2{
-    width: 1350px;
+.container2 {
+    width: 100%;
     height: 100px;
     opacity: 0.75;
     background: #E6FFDE;
@@ -64,7 +91,7 @@ header {
 
 .imgfruit1 {
     text-align: center;
-    background-color:#E6FFDE;
+    background-color: #E6FFDE;
 }
 
 .colors {
@@ -72,61 +99,60 @@ header {
     justify-content: space-between; 
 }
 
-.color1 {
-    width: 270px;
-    height: 130pxpx;
-    background: #3F8536;
-}
-
-.color2 {
+.color1, .color2, .color3, .color4, .color5 {
     width: 270px;
     height: 130px;
-    background: #BFDAB7;
 }
 
-.color3 {
-    width: 270px;
-    height: 130px;
-    background: #739DBD;
+.color1 { 
+    background: #3F8536; 
+    color: #0c3506;
 }
 
-.color4 {
-    width: 270px;
-    height: 130px;
-    background: #F12323;
+.color2 { 
+    background: #BFDAB7; 
+    color: #2b4624;
 }
 
-.color5 {
-    width: 270px;
-    height: 130px;
-    background: #F9C601;
+.color3 { 
+    background: #739DBD; 
+    color: #194d76;
 }
 
-.banner{
-    background-color:#E6FFDE;
+.color4 { 
+    background: #F12323; 
+    color: #6e0808;
+}
+
+.color5 { 
+    background: #F9C601; 
+    color: #8c7415;
+}
+
+.banner {
+    background-color: #E6FFDE;
 }
 
 .apresentacion h4 {
     color: white;
     background-color: #3F8536;
     text-align: center;
-    padding-bottom: 30px;
-    padding-top: 30px;
+    padding: 20px 0;
+    font-size: 18px;
 }
 
 .apresentacion p {
     text-align: center;
-    color:#0c3b05;
-    margin-left: 10px;
-    margin-right: 10px;
+    color: #0c3b05;
+    margin: 0 10px;
+    font-size: 16px;
 }
 
 .carousel {
-    margin: 0 auto; 
+    margin: 50px auto; 
     display: block; 
     width: 80%;     
     max-width: 800px; 
-    margin-top: 50px; 
     border-radius: 5px;
 }
 
@@ -182,5 +208,102 @@ footer {
     .container {
         flex-direction: column; 
         align-items: center;
+    }
+
+    .logo, .sociais {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .menu {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu nav a {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .sociais {
+        justify-content: center;
+    }
+
+    .sociais button {
+        width: 35px;
+        height: 35px;
+        margin-right: 5px;
+    }
+
+    .container2 {
+        width: 100%;
+    }
+
+    .colors {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .color1, .color2, .color3, .color4, .color5 {
+        width: 45%;
+        margin: 5px;
+    }
+
+    .carousel {
+        width: 100%;
+    }
+
+    .apresentacion h4 {
+        font-size: 16px;
+        padding: 15px;
+    }
+
+    .apresentacion p {
+        margin: 5px;
+    }
+
+    footer {
+        text-align: center;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        min-width: auto;
+        margin-bottom: 20px;
+    }
 }
+
+@media (max-width: 480px) {
+    .logo img {
+        width: 80px;
+    }
+
+    .menu nav a {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .sociais button {
+        width: 30px;
+        height: 30px;
+    }
+
+    .color1, .color2, .color3, .color4, .color5 {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .apresentacion h4 {
+        font-size: 14px;
+    }
+
+    .apresentacion p {
+        font-size: 14px;
+    }
 }

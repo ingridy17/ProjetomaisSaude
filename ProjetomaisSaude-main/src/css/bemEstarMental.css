@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-.container{
+.container {
     max-width: 1080px;
     display: flex;
     margin: 0 auto;
@@ -18,11 +18,11 @@ header {
     padding: 10px;
 }
 
-.logo, .sociais{
+.logo, .sociais {
     width: 25%;
 }
 
-.logo img{
+.logo img {
     width: 100px;
     cursor: pointer;
 }
@@ -30,58 +30,93 @@ header {
 .menu {
     width: 50%;
     display: flex;
+    justify-content: center;
 }
 
-.menu nav a{
+.menu nav {
+    display: flex;
+    justify-content: center; 
+    gap: 20px; 
+    flex-wrap: nowrap; 
+    width: 100%;
+}
+
+.menu nav a {
     color: white;
     text-decoration: none;
-    padding-right: 18px;
     font-size: 15px;
-    justify-content: space-between;
+    text-align: center;
+    flex: none; 
+}
+
+@media (max-width: 768px) {
+    .menu nav {
+        flex-wrap: wrap; 
+        justify-content: center;
+    }
+
+    .menu nav a {
+        flex: none;
+        width: 100%; 
+        text-align: center;
+    }
+}
+
+.sociais {
+    display: flex;
+    justify-content: flex-end;
 }
 
 .sociais button {
     width: 40px;
     height: 40px;
-    background-color:#3F8536;
+    background-color: #3F8536;
     color: #ffff;
     border-radius: 8px;
-    margin-right: 10px;
+    margin-left: 10px;
     border: 1px solid #3F8536;
 }
 
-.sociais button i{
-    font-size: 20px;    
+.sociais button i {
+    font-size: 20px;
+}
+
+.back{
+    background-color: #E6FFDE;
 }
 
 .container2{
-    width: 1350px;
+    width: 100%;
+    max-width: 1350px;
     height: 100px;
     opacity: 0.75;
     background: #E6FFDE;
     position: relative;
 }
 
-section {
+.receitas {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
     text-align: center; 
-    margin-top: 20px;
+    background-color: #E6FFDE;
+    min-height: 100vh; 
+    margin: 0 auto; 
 }
 
-section img {
+.receitas h4 {
+    color: #104209;
+    background-color: orange;
+    margin: 20px 0; 
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.receitas img {
     max-width: 100%; 
     height: auto;
-}
-
-section a {
-    display: inline-block; 
-    margin-top: 10px; 
-    text-decoration: none; 
-    color: #3F8536; 
-    font-weight: bold; 
-}
-
-section a:hover {
-    color: #005fa3; 
+    margin: 10px 0; 
 }
 
 footer {
@@ -132,9 +167,6 @@ footer {
     border-top: 1px solid #555;
 }
 
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column; 
-        align-items: center;
-}
-}
+
+
+
